@@ -1,0 +1,12 @@
+<%- include('../_header') -%>
+<h1 class="mb-4">Удалить пост</h1>
+
+<form action="/posts/delete/<%=post.id%>" method="POST">
+	<%- include('_display_form_fields') %>	
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Удалить</button>
+		<a class="btn btn-secondary" href="/posts">Отмена</a>
+		
+	</div>			
+</form>
+<%- include('../_footer') -%>

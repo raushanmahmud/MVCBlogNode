@@ -1,0 +1,12 @@
+<%- include('../_header') -%>
+<h1 class="mb-4">Новый пост</h1>
+
+<form action="/posts" method="POST">
+	<%- include('_form_fields') %>	
+
+	<div class="form-group">
+		<a class="btn btn-secondary" href="/posts">Отмена</a>
+		<button type="submit" class="btn btn-primary">Добавить</button>
+	</div>		
+</form>
+<%- include('../_footer') -%>

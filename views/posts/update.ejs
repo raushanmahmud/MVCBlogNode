@@ -1,0 +1,12 @@
+<%- include('../_header') -%>
+<h1 class="mb-4">Изменить Пост</h1>
+
+<form action="/posts/edit/<%=post.id%>" method="POST">
+	<%- include('_form_fields') %>		
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Сохранить</button>
+		<a class="btn btn-secondary" href="/posts">Отмена</a>
+		
+	</div>		
+</form>
+<%- include('../_footer') -%>

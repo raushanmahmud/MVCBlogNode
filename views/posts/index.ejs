@@ -1,0 +1,23 @@
+<%- include('../_header') -%>
+		<h1 class="mb-4">Посты</h1>
+		<a href="/posts/create" class="btn btn-success">Добавить пост</a>
+		<% for (post of posts) { %>
+		<div class="card mt-4">
+			<div class="card-body">
+				<h4 class="card-title"><%=post.username %></h4>
+				<div class="card-subtitle mb-2 text-muted">
+					<%=post.createdAt.toLocaleDateString()%>
+				</div>
+				<div class="card-text mb-2"><%=post.body %></div>
+				<div class="form-group">
+					<a href="/posts/<%=post.id%>" class="btn btn-primary">Читать</a>
+					<a href="/posts/edit/<%=post.id%>" class="btn btn-warning">Изменить</a>
+					<a href="/posts/delete/<%=post.id%>" class="btn btn-danger">Удалить</a>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		<% } %>
+<%- include('../_footer') -%>
